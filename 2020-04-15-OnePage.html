@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <style>
+        body{
+            margin: 0;
+            background-color: #efd9c1;
+            max-width: 100vw;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .navbar{
+            width: 100%;
+            max-width: 1140px;
+            margin: 0 auto;
+            background-color: #efd9c1;
+            position: relative;
+        }
+
+        .logo{
+            width: 50px;
+            padding: 15px 0;
+        }
+
+        .logo .img1{
+            width: 100%;
+            
+        }
+
+        .top{
+            position: absolute;
+            top: 5px;
+            left: 100px;
+        }
+
+        .banner{
+            width: 100%;
+            height: 600px;
+            background-color: blue;
+            background-size: cover;
+            background-position: bottom;
+            background-image:url(https://content.shopback.com/tw/wp-content/uploads/2018/02/09190340/%E8%B2%B4%E8%88%B9%E7%A5%9E%E7%A4%BE.jpg)  
+        }
+
+
+        .anchors{
+            width: 100% ;
+            background-color: #c7d8c6;
+            top: 0;
+            padding: 15px 0;
+            position: sticky;
+          
+           
+            
+        }
+
+        .container{
+            width: 100% ;
+            max-width: 1140px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between; 
+            
+         
+
+        }
+
+        .anchor{
+            width: 60px;
+            /* background-color: #efd9c1; */
+            padding: 10px 0;
+            border-radius: 2px;
+            color: black;
+            text-align: center;
+            border: 2px  white solid;
+        }
+
+        .mobile{
+            display: none;
+        }
+
+        .mobile_links{
+            display: none;
+          
+        }
+
+
+        a:hover{
+            color: white;
+            transition-duration: 0.5s;
+        }
+
+        .anchor:hover{
+            background-color: gray;
+            transition-duration: 0.5s;
+        }
+
+        #blockF{
+            width: 100%;
+            height: auto;
+            padding: 120px 0;
+            background-color: #a9b7c0;
+           
+        }
+
+        .Farea{
+            max-width: 1140px;
+            height: 800px;
+            /* border: black 1px solid; */
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between; 
+           
+        }
+
+        .areaf{
+            width: calc((100% - 60px) / 3);
+            height: 400px;
+        }
+
+        .Fa{
+            background-color: lavender;
+            background-image: url(https://i0.wp.com/www.funtime.com.tw/blog/wp-content/uploads/2018/03/13778005393_a2eeff6d7a_b.jpg?resize=700%2C465);
+            background-size: cover;
+        }
+
+        .Fb{
+            background-color: lawngreen;
+            background-image: url(https://tw.bring-you.info/imgs/2017/12/yasaka-jinja-10-900x600.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .Fc{
+            background-color: lightcoral;
+            background-image: url(https://i0.wp.com/boo2k.com/wp-content/uploads/2017/02/20170116-IMG_7928.jpg?resize=860%2C573&ssl=1);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .Farea p{
+            width: calc((100% - 60px) / 3);
+            height: 400px;
+            text-align: justify;
+            line-height: 30px;
+            
+        }
+
+        #blockD{
+            width: 100%;
+            height: calc(100vh - 240px);
+            padding: 120px 0;
+            background-color: rebeccapurple;
+            background-image: url(https://souda-kyoto.jp/blog/img/00474/01.jpg);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        #blockE{
+            width: 100%;
+            height: auto;
+            padding: 120px 0;
+            background-color: #a9b7c0;
+        }
+
+        .Earea{
+            max-width: 1140px;
+            height: 800px;
+            /* border: black 1px solid; */
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+         
+
+        }
+
+        .areae{
+            width: calc((100% - 60px) / 2);
+            height: 370px;
+        }
+
+        .Ea{
+            background-color: slategray;
+            background-image: url(https://i1.wp.com/travo.guide/wp-content/uploads/2019/08/%E9%87%91%E9%96%A3%E5%AF%BA-%E8%88%8D%E5%88%A9%E6%AE%BF.jpg?fit=1598%2C899&ssl=1);
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .Eb{
+            background-color: tan;
+            background-image: url(https://cdn.zekkei-japan.jp/images/spots/ebd6b3b7d5056671b25321aeef5f0039.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .Earea p{
+            width: calc((100% - 40px) / 2);
+            height: 400px;
+            text-align: justify;
+            line-height: 30px;
+        }
+
+        #blockC{
+            width: 100%;
+            height: auto;
+            padding: 100px 0;
+            background-color: #a9b7c0;
+            background-image: url(https://lh3.googleusercontent.com/proxy/uweJbxDJLh6DE49P4U79UrLE3Km0-7vFPIyubbg3IzClN13V2W-wm7SovpsmUbwsttjbWVqaXpKhLj2CoYlyv7RHdK4Bez18qzNErCfEuy02Fh-OHRBDLSJKtf8cyZRdf4JvkdBI_341qnXz1tAIaN5ORNHXN1exUZhbAvkhzGlFruV02Vzx5XQV5Mc3);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .Carea{
+            max-width: 1140px;
+            text-align: center;
+            margin: auto;
+           
+        }
+
+        .Carea p{
+            margin: auto;
+            width: 100% ;
+            height: 400px;
+            text-align: justify;
+            line-height: 30px;
+            color: white;
+        }
+
+        @media screen and (max-width: 1280px) {
+            .logo{
+            margin-left: 25px;
+            }
+
+            .anchors{
+            position: sticky;
+            }
+
+            .container{
+            width: calc(100% - 100px);
+            margin: 0 50px;
+            }
+
+            .Farea{
+                margin: 0 50px;
+            }
+
+            .Earea{
+                margin: 0 50px;
+            }
+            
+            .Carea{
+                margin: 0 50px;
+            }
+        }
+
+        @media screen and (max-width:  768px) { 
+        .anchors{
+            position: sticky;
+            z-index: 1;
+        }
+
+        .areaf{
+            width: 100%;
+            height: 200px;
+            background-position: center;
+        }
+
+        .Fb{
+            margin-top: 50px;
+        }
+
+        .Fc{
+            margin-top: 50px;
+        }
+
+        .Farea p { 
+            width: 100% ;
+            height: 100px;
+            text-align: justify;
+            line-height: 15px;
+            font-size: 5px; 
+        }
+
+        .Farea{
+            position: relative;
+        }
+
+        .Fp1{
+            position: absolute;
+            top: 200px;
+        }
+
+        .Fp2{
+            position: absolute;
+            top: 485px;
+        }
+
+        .Fp3{
+            position: absolute;
+            top: 770px;
+        }
+
+       
+
+        .Earea{
+            position: relative;
+        }
+
+        .Ep1{
+            position: absolute;
+            top: 250px;
+           
+        }
+
+        .Ep2{
+            position: absolute;
+            top: 650px;
+           
+        }
+
+        .areae{
+            width: 100%;
+            height: 250px;
+            background-position: center;
+        }
+
+        .Earea p{
+            width: 100% ;
+            height: 100px;
+            text-align: justify;
+            line-height: 15px;
+            font-size: 5px; 
+        }
+
+        }
+
+
+        @media screen and (max-width: 375px) {
+        .anchors{
+            position: sticky;
+        }
+
+            .container{
+                display: none;
+            }
+
+            .mobile{
+                display: block;
+                color: blueviolet;
+            }
+
+            /* .mobile_link{
+                width: 100%;
+                height: 100%;
+                background-color: white;
+            } */
+
+            .mobile_block{
+                background-color: wheat;
+                width: 100%;
+                height: 200px;
+                line-height: 30px;
+                
+            }
+
+            .mobile_links.active{
+                display: block;
+            }
+
+        }
+
+        ul{
+            list-style: none;
+            
+        }
+
+        .footer{
+            width: 100%;
+            height: 60px;
+            background-color: #efd9c1;
+            text-align: center;
+            margin-top: 40px;
+                
+        }
+
+      
+
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <div class="navbar"> 
+            <div class="logo">
+                <img class="img1" src="data:image/jpeg;base64,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" alt="">
+            </div>
+            <h1 class="top">日本神社</h1>
+        </div>
+        <div class="banner"></div>
+    
+    </div>
+    <div class="anchors">
+        <div class="container">
+           <a href="#blockF" class="anchor">區塊A</a>
+           <a href="#blockD" class="anchor">區塊B</a>
+           <a href="#blockE" class="anchor">區塊C</a>
+           <a href="#blockC" class="anchor">區塊D</a>
+        </div>
+
+        <div class="mobile">
+            <i class="fas fa-bars fa-2x"></i>
+        </div>
+    </div>
+
+    <div class="mobile_links">
+       <div class="mobile_block">
+            <span class="close_mobile">X</span>
+                <ul>
+                    <li><a href="">區塊A</a></li>
+                    <li><a href="">區塊B</a></li>
+                    <li><a href="">區塊C</a></li>
+                    <li><a href="">區塊D</a></li>
+                 </ul>
+        </div>  
+    </div>
+
+    <div id="blockF">
+        <div class="Farea">
+            <div class="areaf Fa"></div>
+            <div class="areaf Fb"></div>
+            <div class="areaf Fc"></div>
+            <p class="Fp1">清水寺旅者第一次到京都必去的景點。這座京都最古老的寺院依山而建，始建於778年，山號「音羽山」，自古以來便常出現在《源氏物語》、《枕草子》等日本文學作品中，甚至名列世界文化遺產，無論是春櫻、夏瀑、秋楓、冬雪都有其獨特的美，也因此人潮總是絡繹不絕。</p>
+            <p class="Fp2">八坂神社相傳創建於西元656年，是日本神社社格最高，朝廷有重要大事或社稷有災害發生時，天皇會特別祭拜奉幣的「二十二社」之一；也是全日本「八坂神社」以及神道教中以「素戔嗚尊」為主祭神的神社的總本社。 </p>
+            <p class="Fp3">下鴨神社正式名稱為賀茂御祖神社，位於鴨川及高野川之間的三角地帶，祭祀賀茂建角身命、玉依媛命，為平安時期以前創建京都最古老的神社之一，歷史可追溯至西元八世紀。 下鴨神社的建築物都是仿照平安時代的建築，神社的木材來源都是境內的糺之森。</p>
+        </div>
+    </div>
+
+    <div id="blockD"></div>
+
+    <div id="blockE">
+        <div class="Earea">
+            <div class="areae Ea"></div>
+            <p class="Ep1">金閣寺是一間禪宗寺院，又名為鹿苑寺，位處京都北區，是日本北山文化的代表建築物。 寺院於西元1397年作為足利義滿將軍的北山別墅而修建，於1408年義滿將軍過世後依照其遺願改為佛寺用途， 金閣寺的金閣殿本來是作為舍利殿，是用來收藏神聖的佛陀遺骨。</p>
+            <p class="Ep2">為了復興明治維新時荒廢了的京都、繼承傳統文化並紀念平安建都1100年，京都於1895年舉辦「遷都紀念節」，在此同時創建了「平安神宮」。 「平安神宮」供奉恆武天皇以及孝明天皇，許多建築採5/8的比例，務求重現平安都城的原始風貌，其中特別的是「應天門」及「大極殿」是平安都城「大内裏朝堂院」的重現。</p>
+            <div class="areae Eb"></div>
+            
+        </div>
+    </div>
+
+    <div id="blockC">
+        <div class="Carea">
+            <h1>伏見稻荷大社</h1>
+            <p>伏見稻荷大社號稱有千本鳥居，但其實鳥居數量持續增加中，目前為止已經有一萬座以上的鳥居了。這裡祭奉的是保佑五穀豐登、商業興盛的稻荷大神，被各時代的居民虔誠地供奉著，也被認為是庇佑所有人生活富饒快樂的神明。
+                世界各地的經商人士也會特地前來朝拜。神社內有許多狐狸雕像，很多人以為祭祀的是狐狸，其實不是的。狐狸是稻荷大神的使者，有些狐狸嘴巴裡面會叼著糧倉鑰匙、珠寶等，都是象徵稻荷大社守護著農業與商業。</p>
+        </div>
+    </div>
+
+    <div class="footer">© Japan temples Reserved.</div>
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+    <script>
+        var mobile = document.querySelector(".mobile");
+        var mobile_links = document.querySelector(".mobile_links");
+        var close_mobile = document.querySelector(".close_mobile");
+
+        mobile.addEventListener("click",function(){
+
+            mobile_links.classList.add("active");
+        });
+     
+        close_mobile.addEventListener("click",function(){
+            mobile_links.classList.remove("active");
+        });
+
+        // $('mobile').click(function(){
+        //     $('mobile_links').toggle()
+        // });
+    </script>
+</body>
+</html>
